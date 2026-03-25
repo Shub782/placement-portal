@@ -1,0 +1,21 @@
+{
+  "name": "placement-portal-micro",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+  "dev": "concurrently \"npm run auth\" \"npm run student\" \"npm run job\" \"npm run application\" \"npm run resume\" \"npm run gateway\"",
+  "auth": "cd auth-service && npm run dev",
+  "student": "cd student-service && npm run dev",
+  "job": "cd job-service && npm run dev",
+  "application": "cd application-service && npm run dev",
+  "resume": "cd resume-service && npm run dev",
+  "gateway": "cd api-gateway && npm run dev"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
